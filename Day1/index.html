@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POTD - Day 1</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	<div id="header"><b>My Portfolio 😍</b></div>
+    <div class="project" style="top:350px">
+        <div class="icon text">💸</div>
+        <div class="name text">Super Stocks</div>
+        <div class="date text">May 2024</div>
+        <div class="language text"><span class="hilight1">HTML</span>&nbsp&nbsp<span class="hilight2">CSS</span>&nbsp&nbsp<span class="hilight3">JS</span></div>
+    </div>
+    <button id="startProject" class="text" onclick="startProject()">New Project</button>
+    <div id="panel" style="display:none;">
+        <div id="inputPanel">
+            <div id="newProjectHeader"><b>New Project ✅</b></div>
+            <input type="text" placeholder="?" class="input" id="newIcon">
+            <input type="text" placeholder="Name" class="input" id="newName">
+            <input type="text" placeholder="Date" class="input" id="newDate">
+            <input type="text" placeholder="Languages" class="input" id="newLanguage">
+            <button id="createProject" class="text" onclick="createProject()">Create!</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
