@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POTD - Day 3</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="uploadVisual">Upload File</div>
+    <input id="uploadImage" type="file" accept="image/*" style="opacity:0" onMouseOver="document.getElementById('uploadVisual').style.transform='scale(1.05)'" onMouseOut="document.getElementById('uploadVisual').style.transform='scale(1)'">
+    <div id="imageContainer" style="display:none">
+        <img id="editImage" src="" style="filter: blur(0px) brightness(1) contrast(100%) opacity(100%) saturate(100%)">
+    </div>
+    <div id="editContainer" style="display:none">
+        <div class="label" style="top:5%">Blur</div>
+        <input type="range" id="blur" class="slider" max="10" value="0" style="top:10%;">
+        <div class="label" style="top:20%">Brightness</div>
+        <input type="range" id="brightness" class="slider" max="3" step="0.1" value="1" style="top:25%;">
+        <div class="label" style="top:35%">Contrast</div>
+        <input type="range" id="contrast" class="slider" max="300" value="100" style="top:40%;">
+        <div class="label" style="top:50%">Opacity</div>
+        <input type="range" id="opacity" class="slider" value="100" style="top:55%;">
+        <div class="label" style="top:65%">Saturation</div>
+        <input type="range" id="saturation" class="slider" value="100" max="300" style="top:70%;">
+        <button id="resetEdit" onclick="resetEdit()">Reset Edits</button>
+    </div>
+    <div id="newUploadVisual" style="display:none">Upload File</div>
+    <input id="newUploadImage" type="file" accept="image/*" style="opacity:0" onMouseOver="document.getElementById('newUploadVisual').style.transform='scale(1.05)'" onMouseOut="document.getElementById('newUploadVisual').style.transform='scale(1)'">
+    <script src="script.js"></script>
+  </body>
+</html>

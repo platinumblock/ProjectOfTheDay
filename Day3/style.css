@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+body{
+    font-family: "Reddit Sans", sans-serif;
+    overflow:hidden;
+}
+#uploadVisual{
+    position:absolute;
+    width:30%;
+    height:15%;
+    left:35%;
+    top:40%;
+    background-color:#04AA6D;
+    color:white;
+    font-size:60px;
+    font-weight:900;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:20px;
+    transition:0.1s all;
+}
+#uploadImage{
+    position:absolute;
+    width:30%;
+    height:15%;
+    left:35%;
+    top:40%;
+}
+#newUploadVisual{
+    position:absolute;
+    left:3%;
+    width:10%;
+    height:5%;
+    top:90%;
+    background-color:#04AA6D;
+    color:white;
+    font-size:20px;
+    font-weight:900;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
+    transition:0.1s all;
+}
+#newUploadImage{
+    position:absolute;
+    left:3%;
+    width:10%;
+    height:5%;
+    top:90%;
+}
+#imageContainer{
+    position:absolute;
+    left:-10%;
+    width:100%;
+    top:0%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:white;
+}
+#editImage{
+    max-width:1000px;
+    border-radius:5px;
+}
+#editContainer{
+    position:absolute;
+    left:80%;
+    width:20%;
+    top:0%;
+    height:100%;
+    border-left:2px solid rgb(0,0,0,0.1);
+    background-color:rgb(0,0,0,0.05);
+}
+.slider{
+    -webkit-appearance: none;
+    width:300px;
+    background-color:rgb(193, 255, 181);
+    height:15px;
+    left:10%;
+    position:absolute;
+    border-radius:5px;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    border-radius:50%;
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+.label{
+    font-size:25px;
+    position:absolute;
+    width:300px;
+    left:10%;
+    font-weight:900;
+    text-align:center;
+}
+#resetEdit{
+    height:7%;
+    width:60%;
+    position:absolute;
+    left:20%;
+    top:85%;
+    background-color:#04AA6D;
+    color:white;
+    font-size:23px;
+    font-weight:900;
+    border:none;
+    border-radius:15px;
+    transition:0.1s all;
+}
+#resetEdit:hover{
+    transform:scale(1.05);
+    cursor:pointer;
+}
