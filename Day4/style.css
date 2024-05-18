@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+body{
+    font-family: "Lexend Deca", sans-serif;
+}
+#header{
+    position:absolute;
+    left:30%;
+    top:5%;
+    font-size:40px;
+    font-weight:900;
+    height:7%;
+    width:40%;
+    border-bottom:4px solid black;
+}
+#messageBox{
+    font-family: "Lexend Deca", sans-serif;
+    position:absolute;
+    left:29%;
+    width:40%;
+    top:85%;
+    height:10%;
+    border-radius:50px;
+    //border:4px solid rgb(3, 140, 252);
+    border:none;
+    background-color:rgb(230,230,230);
+    font-size:30px;
+    padding-left:40px;
+    transition:0.1s all;
+}
+#messageBox:focus{
+    outline:none;
+    background-color:rgb(220,220,220);
+}
+#sendMessage{
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    left:66.2%;
+    width:5%;
+    top:85%;
+    height:10%;
+    border-radius:50px;
+    background-color:rgb(3, 140, 252);
+    color:white;
+    font-weight:900;
+    font-size:50px;
+    border:none;
+    transition:0.1s all;
+}
+#sendMessage:hover{
+    transform:scale(1.05);
+    cursor:pointer;
+}
+.message{
+    padding:15px;
+    font-size:25px;
+    border-radius:10px;
+    position:absolute;
+    max-width:35%;
+}
+.mine{
+    background-color:rgb(3, 140, 252);
+    color:white;
+    text-align:left;
+    right:30%;
+}
+.other{
+    background-color:rgb(230,230,230);
+    color:black;
+    text-align:left;
+    left:30%;
+}
+.chat{
+    position:absolute;
+    left:35%;
+    width:30%;
+    background-color:rgb(230,230,230);
+    border-radius:10px;
+    height:10%;
+    transition:0.1s all;
+}
+.chat:hover{
+    transform:scale(1.05);
+}
+.icon{
+    position:absolute;
+    left:5%;
+    top:25%;
+    width:8%;
+    height:50%;
+}
+.name{
+    position:absolute;
+    left:13%;
+    width:70%;
+    height:100%;
+    top:0%;
+    font-size:30px;
+    color:black;
+    display:flex;
+    align-items:center;
+    padding-left:20px;
+    font-weight:900;
+}
+.date{
+    position:absolute;
+    left:65%;
+    width:30%;
+    height:100%;
+    top:0%;
+    font-size:25px;
+    color:rgb(150,150,150);
+    display:flex;
+    align-items:center;
+    padding-left:20px;
+    justify-content:center;
+}
