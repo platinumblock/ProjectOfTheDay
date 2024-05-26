@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+body{
+    overflow-x:hidden;
+    font-family: "Lexend Deca", sans-serif;
+}
+.des{
+    position:absolute;
+}
+.blank{
+    background-color:rgb(230,230,230);
+    width:30px;
+    height:30px;
+    border-radius:50%;
+}
+.bed{
+    background-color:rgb(255, 103, 103);
+    width:100px;
+    height:80px;
+}
+.wall{
+    background-color:rgb(143, 143, 143);
+    width:100px;
+    height:80px;
+}
+.glass{
+    background-color:rgba(29, 255, 217, 0.253);
+    width:100px;
+    height:80px;
+}
+.door{
+    background-color:rgb(139, 93, 7);
+    width:100px;
+    height:80px;
+}
+.table{
+    background-color:rgba(255, 201, 101, 0.815);
+    width:100px;
+    height:80px;
+}
+.chair{
+    background-color:rgb(58, 224, 141);
+    width:100px;
+    height:80px;
+}
+#controlPanel{
+    position:absolute;
+    height:100%;
+    width:20%;
+    left:80%;
+    top:0%;
+    border-left:2px solid rgb(200,200,200);
+    overflow-y:scroll;
+}
+.option{
+    position:absolute;
+    width:35%;
+    height:20%;
+    border-radius:20%;
+    background-color:rgb(235,235,235);
+    border:none;
+    font-family: "Lexend Deca", sans-serif;
+    transition:0.1s all;
+}
+.option:hover{
+    transform:scale(1.05);
+    cursor:pointer;
+}
+.label{
+    font-size:25px;
+    font-weight:700;
+    position:absolute;
+    top:10%;
+    width:100%;
+    left:0%;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+}
+#controlHeader{
+    font-weight:900;
+    text-align:center;
+    width:100%;
+    font-size:40px;
+    text-decoration:underline;
+    text-underline-offset:20px;
+    position:absolute;
+    left:0%;
+    top:5%;
+}
+#indicator{
+    position:absolute;
+    left:72%;
+    top:87%;
+}
+#pitch{
+    position:absolute;
+    font-size:90px;
+    font-weight:900;
+    left:15%;
+    top:25%;
+    text-decoration:underline;
+    text-underline-offset:25px;
+    background: -webkit-linear-gradient(#00ccff, #0077ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#subpitch{
+    position:absolute;
+    font-size:40px;
+    font-weight:600;
+    left:15%;
+    top:42%;
+}
+#house{
+    position:absolute;
+    left:65%;
+    top:20%;
+    transform:rotateY(180deg);
+    animation-name:bounce;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+}
+@keyframes bounce{
+    0%{transform:translateY(0) rotateY(180deg);}
+    50%{transform:translateY(40px) rotateY(180deg);}
+}
+#button{
+    text-decoration:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    background-color:rgb(32, 155, 255);
+    color:white;
+    font-weight:900;
+    position:absolute;
+    left:27%;
+    top:60%;
+    border:none;
+    width:15%;
+    height:8%;
+    border-radius:20px;
+    transition:0.1s all;
+}
+#button:hover{
+    transform:scale(1.05);
+}

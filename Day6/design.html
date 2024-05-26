@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POTD - Day 6</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	<div id="controlPanel">
+        <div id="controlHeader">Furniture</div>
+        <button class="option" style="left:10%;top:20%" onclick="select('blank')">
+            <div class="label">Blank</div>
+        </button>
+        <button class="option" style="left:55%;top:20%" onclick="select('wall')">
+            <div class="wall" style="position:absolute;left:12%;top:40%;transform:scale(0.7)"></div>
+            <div class="label">Wall</div>
+        </button>
+        <button class="option" style="left:10%;top:45%" onclick="select('bed')">
+            <div class="bed" style="position:absolute;left:12%;top:40%;transform:scale(0.7)"></div>
+            <div class="label">Bed</div>
+        </button>
+        <button class="option" style="left:55%;top:45%" onclick="select('glass')">
+            <div class="glass" style="position:absolute;left:12%;top:40%;transform:scale(0.7)"></div>
+            <div class="label">Glass</div>
+        </button> 
+        <button class="option" style="left:10%;top:70%" onclick="select('door')">
+            <div class="door" style="position:absolute;left:12%;top:40%;transform:scale(0.7)"></div>
+            <div class="label">Door</div>
+        </button>   
+        <button class="option" style="left:55%;top:70%" onclick="select('table')">
+            <div class="table" style="position:absolute;left:12%;top:40%;transform:scale(0.7)"></div>
+            <div class="label">Table</div>
+        </button>  
+        <button class="option" style="left:10%;top:95%" onclick="select('chair')">
+            <div class="chair" style="position:absolute;left:12%;top:40%;transform:scale(0.7)"></div>
+            <div class="label">Chair</div>
+        </button> 
+    </div>
+    <div class="" id="indicator"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
