@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+body{
+    font-family: "Lexend Deca", sans-serif;
+}
+#pitch{
+    font-size:80px;
+    font-weight:900;
+    position:absolute;
+    top:30%;
+    left:15%;
+    color:hsl(40 95% 55%);
+}
+@keyframes move-bg {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
+#subpitch{
+    font-weight:400;
+    font-size:32px;
+    position:absolute;
+    top:45%;
+    left:15%;
+}
+#folderImage{
+    width:30%;
+    height:60%;
+    position:absolute;
+    left:60%;
+    top:19%;
+    animation-name:float;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+}
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(35px);}
+}
+#exploreButton{
+    font-weight:900;
+    font-size:30px;
+    color:white;
+    font-family: "Lexend Deca", sans-serif;
+    position:absolute;
+    width:13%;
+    height:7%;
+    top:60%;
+    left:24%;
+    background-color:hsl(40 95% 55%);
+    text-decoration:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:20px;
+    --bg-size: 400%;
+  --color-one: hsl(56, 90%, 55%);
+  --color-two: hsl(40 95% 55%);
+  background: linear-gradient(
+      90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+  
+  animation: move-bg 10s linear infinite;
+  transition:0.1s all;
+}
+#exploreButton:hover{
+    transform:scale(1.05);
+}
+.folder{
+    width:50%;
+    height:10%;
+    position:absolute;
+    left:25%;
+    background-color:white;
+    border:2px solid rgb(220,220,220);
+    transition:0.1s all;
+}
+.folder:hover{
+    cursor:pointer;
+    filter:brightness(95%);
+}
+.file{
+    width:50%;
+    height:10%;
+    position:absolute;
+    left:25%;
+    background-color:white;
+    border:2px solid rgb(220,220,220);
+}
+.image{
+    width:7%;
+    height:90%;
+    position:absolute;
+    left:2%;
+    top:5%;
+}
+.name{
+    width:50%;
+    left:12%;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    position:absolute;
+    height:100%;
+    top:0%;
+    font-size:30px;
+}
+.size{
+    width:18%;
+    left:64%;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    height:100%;
+    top:0%;
+    font-size:25px;
+    border-left:2px solid rgb(220,220,220);
+}
+.date{
+    width:18%;
+    left:82%;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    height:100%;
+    top:0%;
+    font-size:25px;
+    border-left:2px solid rgb(220,220,220);
+}
+#back{
+    font-family: "Lexend Deca", sans-serif;
+    width:10%;
+    height:6%;
+    position:absolute;
+    left:20%;
+    top:10%;
+    background-color:hsl(40 95% 55%);
+    font-weight:900;
+    font-size:30px;
+    color:white;
+    border:none;
+    border-radius:20px;
+    transition:0.1s all;
+}
+#back:hover{
+    cursor:pointer;
+    transform:scale(1.05);
+}
