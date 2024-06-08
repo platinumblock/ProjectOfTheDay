@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+body{
+    font-family: "Lexend Deca", sans-serif;
+}
+.chip{
+    width:80px;
+    height:80px;
+    position:absolute;
+    animation-name:move;
+    animation-iteration-count:infinite;
+    animation-duration:10s;
+    animation-timing-function:ease;
+    
+    
+}
+#c1{
+    animation-delay:0s;
+}
+#c2{
+    animation-delay:1s;
+}
+#c3{
+    animation-delay:2s;
+}
+#c4{
+    animation-delay:3s;
+}
+#c5{
+    animation-delay:4s;
+}
+#c6{
+    animation-delay:5s;
+}
+#c7{
+    animation-delay:6s;
+}
+#c8{
+    animation-delay:7s;
+}
+#c9{
+    animation-delay:8s;
+}
+#c10{
+    animation-delay:9s;
+}
+@keyframes move{
+    0%{left:5%;top:5%;}
+    17%{left:5%;top:85%;}
+    50%{left:90%;top:85%;}
+    67%{left:90%;top:5%;}
+    100%{left:5%;top:5%;}
+}
+#pitch{
+    
+  font-weight:900;
+  font-size:100px;
+  position:absolute;
+  left:17%;
+  top:30%;
+}
+.thing{
+    background: -webkit-linear-gradient(#ff5d5d, #ff9100);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#subpitch{
+    font-size:40px;
+    position:absolute;
+    left:15%;
+    top:50%;
+}
+#card{
+    width:300px;
+    position:absolute;
+    left:67%;
+    top:30%;
+    animation-name:pulse;
+    animation-duration:1.5s;
+    animation-iteration-count:infinite;
+}
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.15);}
+    100%{transform:scale(1);}
+}
+#start{
+    font-weight:900;
+    font-size:30px;
+    color:white;
+    font-family: "Lexend Deca", sans-serif;
+    position:absolute;
+    width:13%;
+    height:7%;
+    top:65%;
+    left:30%;
+    background-color:hsl(40 95% 55%);
+    text-decoration:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:20px;
+    border:none;
+    --bg-size: 400%;
+  --color-one: hsl(138, 69%, 47%);
+  --color-two: hsl(113, 100%, 67%);
+  background: linear-gradient(
+      90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+  
+  animation: move-bg 6s linear infinite;
+  transition:0.1s all;
+  box-shadow:0px 0px 5px 5px rgb(157, 255, 157);
+}
+#start:hover{
+    cursor:pointer;
+    transform:scale(1.05);
+}
+@keyframes move-bg {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
