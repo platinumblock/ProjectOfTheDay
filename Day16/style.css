@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap');
+body{
+    font-family: "Lexend Deca", sans-serif;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+#video{
+    height:932px;
+    left:-5%;
+    position:absolute;
+    top:0%;
+    filter:brightness(80%) saturate(150%);
+}
+#title{
+    font-family: "Playwrite BE VLG", cursive;
+    font-weight:600;
+    font-size:160px;
+    width:100%;
+    position:absolute;
+    left:0%;
+    top:60%;
+    text-align:center;
+    color:white;
+    text-shadow:0px 0px 5px white,0px 0px 10px white,0px 0px 15px white;
+}
+#next{
+    width:170px;
+    height:80px;
+    border-radius:30px;
+    position:absolute;
+    left:89%;
+    top:89%;
+    background:none;
+    color:white;
+    border:none;
+    outline:none;
+    font-weight:800;
+    font-size:40px;
+    transition:0.2s all;
+}
+#next:hover{
+    background-color:rgb(0,0,0,0.3)
+}
+#container1{
+    transition:1s all;
+}
+#container2{
+    transition:1s all;
+    width:100%;
+    height:100%;
+    background-color:rgb(240,240,240);
+    position:absolute;
+    left:0%;
+    top:0%;
+}
+#container3{
+    transition:1s all;
+    width:100%;
+    height:100%;
+    background-color:rgb(30,30,30);
+    position:absolute;
+    left:0%;
+    top:0%;
+}
+.gone{
+    opacity:0;
+}
+.reallygone{
+    display:none;
+}
+#welcome{
+    position:absolute;
+    width:50%;
+    left:25%;
+    height:20%;
+    top:40%;
+    font-size:60px;
+    font-weight:500;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.moveImage{
+    width:300px;
+    height:200px;
+    border-radius:20px;
+    position:absolute;
+    object-fit:cover;
+    animation-name:move;
+    animation-duration:48s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    box-shadow:0px 0px 10px 3px orange;
+}
+@keyframes move{
+    0%{left:5%;top:5%;}
+    17%{left:5%;top:72%;}
+    50%{left:80%;top:72%;}
+    67%{left:80%;top:5%;}
+    100%{left:5%;top:5%;}
+}
+#test{
+    width:100%;
+    text-align:center;
+    font-size:60px;
+    font-weight:500;
+    position:absolute;
+    left:0%;
+    top:20%;
+    color:orange;
+    text-shadow:0px 0px 5px orange;
+}
+#sample{
+    width:30%;
+    position:absolute;
+    left:35%;
+    top:40%;
+    height:35%;
+}
+.artist{
+    border:2px solid rgb(220,220,220);
+    width:25%;
+    left:20%;
+    height:8%;
+    position:absolute;
+    padding-left:20px;
+    font-weight:500;
+    font-size:35px;
+    display:flex;
+    align-items:center;
+    border-radius:20px;
+    background-color:white;
+    transition:0.2s all;
+    font-family: "Lexend Deca", sans-serif;
+}
+.artist:hover{
+    filter:brightness(95%);
+    cursor:pointer;
+}
+#song{
+    position:absolute;
+    width:30%;
+    height:50%;
+    top:30%;
+    background-color:rgb(235,235,235);
+    border-radius:30px;
+    left:50%;
+}
+#theSong{
+    position:absolute;
+    width:70%;
+    left:15%;
+    height:50%;
+    top:25%;
+}
+#newhit{
+    text-align:center;
+    width:100%;
+    font-size:33px;
+    position:absolute;
+    left:0%;
+    top:10%;
+    font-weight:800;
+}
+#topartists{
+    position:absolute;
+    left:20%;
+    top:18%;
+    font-size:50px;
+    font-weight:700;
+    text-decoration:underline;
+    text-underline-offset:15px;
+}
