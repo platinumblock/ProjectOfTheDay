@@ -1,31 +1,65 @@
-function next(num){
-    document.getElementById("container"+num).classList.add("gone");
-    setTimeout(() => {
-        document.getElementById("container"+num).classList.add("reallygone");
-      }, "1000");
-}
-function previous(num){
-    document.getElementById("container"+(num-1)).classList.remove("gone");
-    document.getElementById("container"+(num-1)).classList.remove("reallygone");
-}
-var counter=1;
-document.onkeypress = function (e) {
+var letters=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var greeks=["α","β","χ","δ","ε","φ","γ","","ι","","κ","λ","μ","ν","ο","π","","ρ","σ","τ","υ","","ω","ξ","θ","ζ"];
+var numbers=["0","1","2","3","4","5","6","7","8","9"];
+var sLetters=["ᵃ","ᵇ","ᶜ","ᵈ","ᵉ","ᶠ","ᵍ","ʰ","ᶦ","ʲ","ᵏ","ˡ","ᵐ","ⁿ","ᵒ","ᵖ","ᑫ","ʳ","ˢ","ᵗ","ᵘ","ᵛ","ʷ","ˣ","ʸ","ᶻ"];
+var sNumbers=["⁰","¹","²","³","⁴","⁵","⁶","⁷","⁸","⁹"];
+var height=28;
+document.onkeydown = function (e) {
     e = e || window.event;
-    if(e.keyCode==13){
-        next(counter);
-        counter++;
-    }
-    if(e.keyCode==113){
-        previous(counter);
-        counter--;
-    }
-};
-var artists=[["Sub Zero Project","eeLgkW0WqQQ"],["Rebelion","uMhhbLh__FA"],["Hard Driver","H9kXQkkMgl0"],["Sefa","bWbLwbwhKsk"],["Deadly Guns","PdkVXwoo1zc"]]
-function select(artist){
-    for(var i=0;i<artists.length;i++){
-        if(artists[i][0]==artist){
-            document.getElementById("theSong").src="https://www.youtube.com/embed/"+artists[i][1];
-            break;
+    var key=e.keyCode;
+    console.log(key);
+    var equation=document.getElementById("equation");
+    if(e.altKey){
+        if(key>=48 && key<=57){
+            equation.innerHTML+=sNumbers[key-48];
+        }
+        if(key>=65 && key<=90){
+            equation.innerHTML+=sLetters[key-65];
+        }
+    }else{
+        if(key==8){
+            equation.innerHTML=equation.innerHTML.substring(0,equation.innerHTML.length-1);
+        }
+        if(key==13){
+            equation.innerHTML+="<br>";
+            height+=6;
+            document.getElementById("indicator").style.top=height+"%";
+        }
+        if(key>=48 && key<=57){
+            if(e.shiftKey){
+                if(key==48){
+                    equation.innerHTML+=")";
+                }
+                if(key==57){
+                    equation.innerHTML+="(";
+                }
+                if(key==56){
+                    equation.innerHTML+="•"
+                }
+            }else{
+                equation.innerHTML+=numbers[key-48];
+            }
+            
+        }
+        if(key>=65 && key<=90){
+            if(e.shiftKey){
+                equation.innerHTML+=greeks[key-65];
+            }else{
+                equation.innerHTML+=letters[key-65];
+            }
+        }
+        if(key==187){
+            if(e.shiftKey){
+                equation.innerHTML+="+";
+            }else{
+                equation.innerHTML+="=";
+            }
+        }
+        if(key==189){
+            equation.innerHTML+="-";
+        }  
+        if(key==191){
+            equation.innerHTML+="÷";
         }
     }
-}
+};
