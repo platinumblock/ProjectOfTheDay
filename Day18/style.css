@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+body{
+    font-family: "Lexend Deca", sans-serif;
+}
+#background{
+    position:absolute;
+    left:0%;
+    top:0%;
+    width:100%;
+    height:100%;
+    background: -webkit-linear-gradient(#000000,#282828);
+}
+.star{
+    width:2px;
+    height:2px;
+    border-radius:50%;
+    position:absolute;
+    background-color:white;
+    box-shadow:0px 0px 3px 2px white;
+    animation-name:fall;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    opacity:0.3;
+    transition:0.2s all;
+}
+@keyframes fall{
+    0%{top:-5%;}
+    100%{top:105%;}
+}
+#pitch{
+    width:100%;
+    position:absolute;
+    left:0%;
+    top:30%;
+    font-size:120px;
+    font-weight:700;
+    text-shadow:0px 0px 5px white;
+    color:white;
+    text-align:center;
+}
+#subpitch{
+    width:100%;
+    position:absolute;
+    left:0%;
+    top:55%;
+    font-size:30px;
+    font-weight:700;
+    text-shadow:0px 0px 5px white;
+    color:white;
+    text-align:center;
+}
+#exploreButton{
+    width:15%;
+    left:42.5%;
+    position:absolute;
+    height:10%;
+    top:70%;
+    background-color:white;
+    border:none;
+    color:black;
+    border-radius:20px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight:700;
+    font-size:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    transition:0.2s all;
+    box-shadow:0px 0px 3px 1px white;
+}
+#exploreButton:hover{
+    background-color:rgb(162, 131, 199);
+    box-shadow:0px 0px 3px 1px rgb(162, 131, 199);
+    transform:scale(1.05);
+}
+#title{
+    position:absolute;
+    left:5%;
+    top:5%;
+    font-size:55px;
+    font-weight:700;
+    color:rgb(162, 131, 199);
+    text-shadow:0px 0px 3px rgb(162, 131, 199),0px 0px 5px rgb(162, 131, 199);
+    text-decoration:none;
+}
+#title2{
+    position:absolute;
+    left:5%;
+    top:5%;
+    font-size:55px;
+    font-weight:700;
+    color:rgb(162, 131, 199);
+    text-decoration:none;
+}
+#title3{
+    position:absolute;
+    left:2%;
+    top:2%;
+    font-size:25px;
+    font-weight:700;
+    color:rgb(162, 131, 199);
+    text-decoration:none;
+}
+.activity{
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    font-size:40px;
+    font-weight:700;
+    text-decoration:none;
+    top:47%;
+    animation-name:float;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+}
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(65px);}
+}
+#activityHeader{
+    position:absolute;
+    width:100%;
+    left:0%;
+    top:25%;
+    font-size:70px;
+    text-decoration:underline;
+    text-underline-offset:15px;
+    text-align:center;
+}
+.dot{
+    position:absolute;
+    border-radius:50%;
+    animation-name:pulse;
+    animation-iteration-count:infinite;
+}
+@keyframes pulse{
+    0%{transform:scale(1.0);}
+    50%{transform:scale(2.0);}
+    100%{transform:scale(1.0);}
+}
+.square{
+    position:absolute;
+    animation-name:pulse2;
+    animation-iteration-count:infinite;
+}
+@keyframes pulse2{
+    0%{transform:scale(1.0);}
+    50%{transform:scale(1.5);}
+    100%{transform:scale(1.0);}
+}
+.chill{
+    position:absolute;
+    animation-name:pulse;
+    animation-iteration-count:infinite;
+}
+
+
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    z-index: -1;
+   /* overflow: hidden;*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    filter: grayscale(100%);
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    /*overflow: hidden;*/
+    height: 100%;
+    bottom: 0px;
+    background-image: linear-gradient(to top, --body-color 20%, --body-color 80%);
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+#code{
+    position:absolute;
+    left:25%;
+    width:50%;
+    font-size:30px;
+    top:30%;
+}
+
