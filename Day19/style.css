@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+body{
+    font-family: "Lexend Deca", sans-serif;
+    overflow-x:hidden;
+}
+.soundBar{
+    position:absolute;
+    background-color:rgb(56, 192, 56);
+    height:3%;
+    animation-name:sound;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+    border-radius:10px;
+    box-shadow:0px 0px 3px 1px rgba(0,0,0,0.2);
+}
+@keyframes sound{
+    0%{width:0%;}
+    50%{width:40%;}
+    100%{width:0%;}
+}
+.letter{
+    position:absolute;
+    color:rgba(0,0,0,0.1);
+    font-size:20px;
+    animation-name:move;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    z-index:-999;
+}
+@keyframes move{
+    0%{left:-3%;}
+    100%{left:103%;}
+}
+#pitch{
+    position:absolute;
+    left:50%;
+    top:30%;
+    font-size:100px;
+    font-weight:700;
+    color:rgb(56, 192, 56);
+    text-shadow:0px 0px 3px rgba(0,0,0,0.3);
+}
+#subpitch{
+    position:absolute;
+    left:50%;
+    top:50%;
+    font-size:32px;
+    font-weight:500;
+}
+#startButton{
+    position:absolute;
+    left:63%;
+    top:65%;
+    width:15%;
+    height:10%;
+    background-color:rgb(56,192,56);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    border-radius:15px;
+    font-weight:700;
+    font-size:45px;
+    box-shadow:0px 0px 3px 1px rgba(0,0,0,0.2);
+    transition:0.1s all;
+}
+#startButton:hover{
+    transform:scale(1.05);
+}
+#output{
+    width:70%;
+    position:absolute;
+    left:15%;
+    height:50%;
+    top:10%;
+    background-color:rgb(245,245,245);
+    border:1px solid rgb(225,225,225);
+    border-radius:15px;
+    padding:20px;
+    font-size:25px;
+}
+#start{
+    font-family: "Lexend Deca", sans-serif;
+    position:absolute;
+    background-color:rgb(56, 192, 56);
+    height:7%;
+    width:10%;
+    left:39%;
+    top:75%;
+    border-radius:5px;
+    color:white;
+    font-size:30px;
+    font-weight:700;
+    border:1px solid rgb(225,225,225);
+    transition:0.1s all;
+}
+#start:hover{
+    cursor:pointer;
+    transform:scale(1.05);
+}
+#stop{
+    font-family: "Lexend Deca", sans-serif;
+    position:absolute;
+    background-color:rgb(240, 61, 61);
+    height:7%;
+    width:10%;
+    left:52%;
+    top:75%;
+    border-radius:5px;
+    color:white;
+    font-size:30px;
+    font-weight:700;
+    border:1px solid rgb(225,225,225);
+    transition:0.1s all;
+}
+#stop:hover{
+    cursor:pointer;
+    transform:scale(1.05);
+}
+#confidence{
+    border-radius:50%;
+    width:70px;
+    height:70px;
+    position:absolute;
+    left:85%;
+    top:7%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:rgb(245,245,245);
+    border:1px solid rgb(225,225,225);
+    font-size:22px;
+    font-weight:400;
+}
+#clear{
+    font-family: "Lexend Deca", sans-serif;
+    position:absolute;
+    color:rgb(240, 61, 61);
+    height:5%;
+    width:8%;
+    left:79.5%;
+    top:67%;
+    border-radius:5px;
+    font-size:22px;
+    font-weight:700;
+    border:2px solid rgb(240, 61, 61);
+    background:none;
+    transition:0.1s all;
+}
+#clear:hover{
+    cursor:pointer;
+    transform:scale(1.05);
+}
+#home{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0,0,0,0.4);
+    color:white;
+    text-decoration:none;
+    font-size:70px;
+    position:absolute;
+    left:3%;
+    top:3%;
+    font-weight:500;
+    width:78px;
+    height:70px;
+    border-radius:50%;
+    border:1.5px solid rgb(205,205,205);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-bottom:10px;
+    padding-right:2px;
+    transition:0.1s all;
+}
+#home:hover{
+    transform:scale(1.05);
+}
